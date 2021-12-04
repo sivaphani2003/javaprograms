@@ -1,0 +1,40 @@
+import java.util.*;
+class demorectangle
+{
+	double length;
+	double breadth;
+	demorectangle(double l,double b){
+		length=l;
+		breadth=b;
+		//length1=length;
+		//breadth1=breadth;
+	}
+	double area()
+	{
+		//System.out.println(length*breadth);
+		return length*breadth;
+	}
+}
+class pararectangle
+{
+	public static void main(String[] args)
+	{
+		Scanner sc= new Scanner(System.in);
+		double A;
+		double l,b;
+		System.out.println("enter the length of the 1st rectangle");
+		l=sc.nextInt();
+		System.out.println("enter the breadth of the 1st rectangle");
+		b=sc.nextInt();
+		demorectangle r1=new demorectangle(l,b);
+		A=r1.area();
+		System.out.println("area ="+A);
+		System.out.println("enter the length of the 2nd rectangle");
+		l=sc.nextInt();
+		System.out.println("enter the breadth of the 2nd rectangle");
+		b=sc.nextInt();
+		demorectangle r2=new demorectangle(l,b);
+		A=r2.area();
+		System.out.println("area ="+A);
+	}
+}
