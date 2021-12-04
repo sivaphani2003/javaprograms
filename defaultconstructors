@@ -1,0 +1,29 @@
+class demorectangle
+{
+	double length;
+	double breadth;
+	demorectangle(){
+		length=10.0;
+		breadth=10.0;
+		//length1=length;
+		//breadth1=breadth;
+	}
+	double area()
+	{
+		System.out.println(length*breadth);
+		return length*breadth;
+	}
+}
+class rectangle
+{
+	public static void main(String[] args)
+	{
+		double A;
+		demorectangle r1=new demorectangle();
+		A=r1.area();
+		System.out.println("area ="+A);
+		demorectangle r2=new demorectangle();
+		A=r2.area();
+		System.out.println("area ="+A);
+	}
+}
