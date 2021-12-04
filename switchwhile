@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class switchwhile
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("enter the choice 1 or 2: ");
+    int x=sc.nextInt();
+    while(x!=3)
+    {
+      switch(x)
+      {
+        case 1: System.out.println("your entered choice is 1");
+                System.out.print("enter the choice 1 or 2: ");
+                x=sc.nextInt();
+                break;
+        case 2: System.out.println("your enter choice is 2 ");
+                System.out.print("enter the choice 1 or 2: ");
+                x=sc.nextInt();
+                break;
+        default:
+                System.out.println("enter the correct choice");
+                System.out.print("enter the choice 1 or 2: ");
+                x=sc.nextInt();
+                break;
+      }
+    }
+  }
+}
