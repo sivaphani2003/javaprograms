@@ -1,0 +1,14 @@
+import java.util.*;
+public class calender
+	{
+	public static void main(String args[])
+	{
+		Calendar k=Calendar.getInstance();
+		k.add(Calendar.YEAR,2);
+		System.out.println(k.getTime());
+		k.add(Calendar.MONTH,2);
+		System.out.println(k.getTime());
+		k.add(Calendar.DATE,2);
+		System.out.println(k.getTime());
+	}
+}
