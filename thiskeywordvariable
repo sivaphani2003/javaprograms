@@ -1,0 +1,21 @@
+class ex1
+{
+    int a,b,c;
+    ex1(int a,int b,int c)
+    {
+        this.a=a;
+        this.b=b;
+        this.c=c;
+    }
+    void display()
+    {
+        System.out.println(a+" "+b+" "+c);
+    }
+}
+public class thiskeyvar {
+    public static void main(String[] args)
+    {
+        ex1 a=new ex1(10,20,30);
+        a.display();
+    }
+}
