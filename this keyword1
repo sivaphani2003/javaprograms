@@ -1,0 +1,19 @@
+class ex
+{
+    ex()
+    {
+        System.out.println("hello ex");
+
+    }
+    ex(int x)
+    {
+        this();
+        System.out.println(x);
+    }
+}
+public class thiskey {
+    public static void main(String[] args)
+    {
+        ex a = new ex(10);
+    }
+}
