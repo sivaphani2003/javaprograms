@@ -3,7 +3,7 @@ class employee
 {
     //NumberFormat nf=NumberFormat.getCurrencyInstance();
     String name,ID;
-    int salary,noofhours;
+    int salary,noofhours,nd;
     Scanner sc1 = new Scanner(System.in);
     void getinfo()
     {
@@ -29,7 +29,7 @@ class employee
             System.out.println("enter the no of days the employee worked more hours");
             nd=sc1.nextInt();
             System.out.println("you are a hardworker so we have incremented your salary by 5$ per day you have worked");
-            salary=salary+5;
+            salary=salary+(5*nd);
         }
         System.out.println("your Salary is $"+salary);
         System.out.println();
