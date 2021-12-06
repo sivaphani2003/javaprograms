@@ -26,6 +26,8 @@ class employee
     {
         if(noofhours>6)
         {
+            System.out.println("enter the no of days the employee worked more hours");
+            nd=sc1.nextInt();
             System.out.println("you are a hardworker so we have incremented you salary by 5$");
             salary=salary+5;
         }
