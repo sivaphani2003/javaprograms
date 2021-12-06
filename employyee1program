@@ -1,0 +1,63 @@
+import java.util.Scanner;
+class employee
+{
+    //NumberFormat nf=NumberFormat.getCurrencyInstance();
+    String name,ID;
+    int salary,noofhours;
+    Scanner sc1 = new Scanner(System.in);
+    void getinfo()
+    {
+        name=sc1.next();
+        ID=sc1.next();
+        salary=sc1.nextInt();
+        noofhours=sc1.nextInt();
+    }
+    void AddSal()
+    {
+        if(salary<500)
+        {
+            System.out.println("you are one of the favorite employee in our company therefore we given 10$ as bonus");
+            salary=salary+10;
+        }
+        System.out.printf("your Salary is $"+salary);
+        System.out.println();
+    }
+    void AddWork()
+    {
+        if(noofhours>6)
+        {
+            System.out.println("you are a hardworker so we have incremented you salary by 5$");
+            salary=salary+5;
+        }
+        System.out.println("your Salary is $"+salary);
+        System.out.println();
+    }
+}
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n,i;
+        System.out.println("enter the no of employees in your company");
+        n=sc.nextInt();
+
+        employee[] arr;
+        arr=new employee[n];
+        int x=1;
+        for(i=0;i<n;i++)
+        {
+            System.out.printf("enter the details of %d employee",x);
+            System.out.println();
+            arr[i]= new employee();
+            System.out.println("enter the following elements in order as name,id,salary,no of working hours in one line seperated with space");
+            arr[i].getinfo();
+            System.out.printf("salary of %d th employee\n",x);
+            arr[i].AddSal();
+            arr[i].AddWork();
+            x++;
+        }
+        
+        
+    }
+}
