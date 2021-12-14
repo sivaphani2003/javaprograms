@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class variablelength
+{
+    public static void sum(int ...a)
+    {
+        int s=0;
+        for(int i=0;i<a.length;i++)
+        {
+            s=s+a[i];
+        }
+        System.out.printf("the sum of given numbers is %d",s);
+    }
+	public static void main(String[] args) {
+	    Scanner s1 = new Scanner(System.in);
+		System.out.println("enter the number of numbers you want to do sum ");
+		int n=s1.nextInt();
+		int[] b=new int[n];
+		System.out.printf("enter the %d numbers",n);
+		System.out.println();
+		for(int j=0;j<n;j++)
+		{
+		    b[j]=s1.nextInt();
+		}
+		sum(b);
+		
+	}
+}
