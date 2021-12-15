@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class Student
+{
+    Scanner sc=new Scanner(System.in);
+    String name,rollno;
+    Student()
+    {
+        System.out.println("enter the name and roll number of the student");
+    name=sc.next();
+    rollno=sc.next();
+    }
+}
+class test extends Student
+{
+    Scanner sc1=new Scanner(System.in);
+    int[] m=new int[6];
+    test()
+    {
+        System.out.println("enter the marks of six subjects");
+        for(int i=0;i<6;i++)
+        {
+            m[i]=sc1.nextInt();
+        }
+    }
+}
+class result extends test
+{
+    int r=0;
+    void result1()
+    {
+    for(int i=0;i<6;i++)
+        {
+            r=r+m[i];
+        }
+    }
+}
+class Main
+{
+    public static void main(String[] args)
+    {
+        result s=new result();
+        s.result1();
+        System.out.println("the result of the student is");
+        System.out.println(s.r);
+    }
+    
+}
