@@ -7,7 +7,9 @@ class student
 	}
 	student(int a,int b,int c)
 	{
-		this();
+	    this();
+	    System.out.println("here this is used as constructor");
+		System.out.println("here this is used to access the class variables");
 		this.a=a;
 		this.b=b;
 		this.c=c;
@@ -19,16 +21,18 @@ class student
 	void n()
 	{
 		System.out.println("Hello n");
+		System.out.println("here this is used in calling class method");
 		this.m();
 	}
 	void display()
 	{
+	    System.out.println("here display function is called");
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(c);
 	}
 }
-public class thisdemo
+public class Main
 {
 	public static void main(String args[])
 	{
