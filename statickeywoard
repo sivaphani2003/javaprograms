@@ -1,8 +1,9 @@
-public class statickey {
+public class Main {
     static int a=3;
     static int b;
     static void meth(int x)
     {
+        System.out.println("here the static method is called");
         System.out.println(x);
         System.out.println(a);
         System.out.println(b);
@@ -11,6 +12,7 @@ public class statickey {
     static
     {
         System.out.println("static block intantiated");
+        System.out.println("here the static variables are used");
         b=a*4;
     }
     public static void main(String[] args)
