@@ -58,8 +58,6 @@ class testemployee
             arr[i].AddSal();
             arr[i].AddWork();
             x++;
-        }
-        
-        
+        }   
     }
 }
