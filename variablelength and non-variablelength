@@ -3,13 +3,24 @@ public class Main
 {
     public static void sum(String x,int ...a)
     {
+        System.out.println("here variablle length and non variable length both are taken");
         System.out.println(x);
         int s=0;
         for(int i=0;i<a.length;i++)
         {
             s=s+a[i];
         }
-        System.out.printf("the sum of given numbers is %d",s);
+        System.out.printf("the sum of given numbers is %d\n",s);
+    }
+    public static void sum(int ...a)
+    {
+        System.out.println("here only variable length argument is taken");
+        int s=0;
+        for(int i=0;i<a.length;i++)
+        {
+            s=s+a[i];
+        }
+        System.out.printf("the sum of given numbers is %d\n",s);
     }
 	public static void main(String[] args) {
 	    Scanner s1 = new Scanner(System.in);
@@ -22,6 +33,7 @@ public class Main
 		{
 		    b[j]=s1.nextInt();
 		}
+		sum(b);
 		sum("hello",b);
 		
 	}
