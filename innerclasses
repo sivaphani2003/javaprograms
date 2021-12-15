@@ -3,18 +3,20 @@ class outerclass
     int outer_x=100;
     void test()
     {
+        System.out.println("In outer class test method");
         Inner inner = new Inner();
         inner.display();
     }
     class Inner{
         void display()
         {
+            System.out.println("In inner class display method");
             System.out.println("display: outer_x= "+outer_x);
         }
     }
 
 }
-public class nestedclassobj {
+public class Main {
     public static void main(String[] args)
     {
         outerclass outer = new outerclass();
