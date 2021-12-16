@@ -4,6 +4,7 @@ public class Main {
     static void meth(int x)
     {
         System.out.println("here the static method is called");
+        System.out.println("in the static method only static variables are used otherwise it will arise an error");
         System.out.println(x);
         System.out.println(a);
         System.out.println(b);
