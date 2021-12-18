@@ -1,0 +1,62 @@
+import java.util.Scanner;
+class room
+{
+    Scanner s= new Scanner(System.in);
+    void area()
+    {
+        System.out.println("METHOD OVERLOADING WITH 0 PARAMETERS");
+        System.out.println("in method");
+        System.out.println("enter length");
+        int l=s.nextInt();
+        System.out.println("enter width");
+        int w=s.nextInt();
+        System.out.printf("The area of the room is %d\n",l*w);
+    }
+    void area(int a)
+    {
+        System.out.println("METHOD OVERLOADING WITH 1 PARAMETERS");
+        System.out.println("in method");
+        System.out.println("enter width");
+        int w=s.nextInt();
+        System.out.printf("The area of the room is %d\n",a*w);
+    }
+    void area(int a,int b)
+    {
+        System.out.println("METHOD OVERLOADING WITH 2 PARAMETERS");
+        System.out.println("in method");
+        System.out.printf("The area of the room is %d\n",a*b);
+    }
+}
+class Main
+{
+    public static void main (String[] args) 
+    {
+        Scanner sc1=new Scanner(System.in);
+        while(true)
+        {
+            System.out.println("enter your choice method overloading \n1:with 0 parameters\n2:with 1 parameter \n3:with 2 parameters");
+            System.out.println("4:exit");
+            int ch=sc1.nextInt();
+            switch(ch)
+    		{
+    		    case 1: room r=new room();
+    		            r.area();
+    		            break;
+    		    case 2: room r1=new room();
+    		            System.out.println("enter length outside the method");
+    		            int x=sc1.nextInt();
+    		            r1.area(x);
+    		            break;
+    		    case 3: room r2=new room();
+    		            System.out.println("enter length outside the method");
+    		            x=sc1.nextInt();
+    		            System.out.println("enter width outside the method");
+    		            int y=sc1.nextInt();
+    		            r2.area(x,y);
+    		            break;
+    		    case 4: java.lang.System.exit(0);
+    		    default:System.out.println("please enter the correct choice");
+    		}
+        }
+    }
+}
