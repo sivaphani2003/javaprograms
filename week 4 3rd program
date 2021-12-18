@@ -1,19 +1,13 @@
-/******************************************************************************
-
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
-
-*******************************************************************************/
 import java.util.Scanner;
 class side
 {
     Scanner s = new Scanner(System.in);
     int l;
-    void length()
+    int length()
     {
         System.out.println("enter the side of the figure");
         l=s.nextInt();
+        return l;
     }
 }
 class cube extends side
@@ -21,26 +15,36 @@ class cube extends side
     int ar;
     void area()
     {
+        int l1;
         System.out.println("Here the figure is cube");
-        length();
-        ar=l*l*l;
-        System.out.printf("The area of the cube is %d\n",ar);
+        l1=length();
+        ar=l1*l1*l1;
+        System.out.printf("The volume of the cube is %d\n",ar);
+        System.out.printf("The surface area of the cube is %d\n",6*l*l);
     }
 }
 class triangle extends side
 {
     void area()
     {
-        System.out.println("Here the figure is equilateral triangle");
-        length();
-        System.out.printf("The area of the equilateral triangle is %.2f\n",(1.732*l*l)/4);
+        int s1,s2,s3,s;
+        System.out.println("Here the figure is triangle");
+        s1=length();
+        s2=length();
+        s3=length();
+        s=s1+s2+s3;
+        //System.out.printf("The area of the triangle is %.2f\n",(1.732*l*l)/4);
+        System.out.printf("The perimeter of the equilateral triangle is %d\n",s1+s2+s3);
     }
 }
 public class Main
 {
 	public static void main(String[] args) {
 	    Scanner sc1=new Scanner(System.in);
-		System.out.println("enter your choice to get the area of 1:cube 2:equilateral triangle\n");
+		
+		while(true)
+		{
+		    System.out.println("enter your choice to get the area of 1:cube 2:equilateral triangle and 3:exit\n");
 		int ch=sc1.nextInt();
 		switch(ch)
 		{
@@ -50,7 +54,9 @@ public class Main
 		    case 2: triangle t =new triangle();
 		            t.area();
 		            break;
+		    case 3: java.lang.System.exit(0);
 		    default:System.out.println("please enter the correct choice");
+		}
 		}
 	}
 }
