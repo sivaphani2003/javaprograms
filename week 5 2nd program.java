@@ -38,7 +38,7 @@ public class Main
 		ch=sc1.nextInt();
 		if(ch==1)
 		{
-		    System.out.println("Enter the length and breadth of the triangle");
+		    System.out.println("Enter the length and breadth of the rectangle");
 		    rectangle r=new rectangle();
 		    float x= r.area();
 		    System.out.printf("area of rectangle is %.2f\n",x);
