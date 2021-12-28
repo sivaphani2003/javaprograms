@@ -6,6 +6,7 @@ class employee
     double salary;
     void reademp()
     {
+        System.out.println("Enter the name ,id and salary of the employee");    
         name=sc.next();
         id=sc.next();
         salary=sc.nextDouble();
