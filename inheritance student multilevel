@@ -6,8 +6,8 @@ class Student
     Student()
     {
         System.out.println("enter the name and roll number of the student");
-    name=sc.next();
-    rollno=sc.next();
+        name=sc.next();
+        rollno=sc.next();
     }
 }
 class test extends Student
@@ -38,10 +38,20 @@ class Main
 {
     public static void main(String[] args)
     {
-        result s=new result();
-        s.result1();
-        System.out.println("the result of the student is");
-        System.out.println(s.r);
+        Scanner sc0 = new Scanner(System.in);
+        System.out.println("enter the no of students to get the result: ");
+        int n=sc0.nextInt();
+        result[] s=new result[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.printf("enter the details,marks of the %d student\n",i+1);
+            s[i]=new result();
+            s[i].result1();
+            System.out.println("the result of the student is");
+            System.out.println(s[i].r);
+            
+        }
+        
     }
     
 }
