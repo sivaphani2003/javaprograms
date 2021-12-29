@@ -10,7 +10,7 @@ interface Department
 class Exam implements Student,Department
 {
     Scanner s=new Scanner(System.in);
-    int sno,cls,c,atd;
+    int c,atd,sno,cls;
     String sname;
     public void getvalue()
     {
@@ -19,6 +19,7 @@ class Exam implements Student,Department
         cls=s.nextInt();
         s.next();
         sname=s.nextLine();
+        
     }
     public void getattendence()
     {
@@ -31,24 +32,20 @@ class Exam implements Student,Department
         {
             c=c+1;
         }
-        if(cls>5)
-        {
-            c=c+1;
-        }
     }
-    public String eligible()
+    public Boolean eligible()
     {
-        if(c==2)
+        if(c==1)
         {
-            return("YES");
+            return true;
         }
         else
         {
-            return("NO");
+            return false;
         }
     }
 }
-public class Main
+public class isample
 {
     public static void main(String args[])
     {
@@ -56,7 +53,14 @@ public class Main
         e.getvalue();
         e.getattendence();
         e.calattendence();
-        String g=e.eligible();
-        System.out.println(g);
+        Boolean g=e.eligible();
+        if(g)
+        {
+            System.out.println("Student is Eligible");
+        }
+        else
+        {
+            System.out.println("Student is not Eligible");
+        }
     }
 }
