@@ -6,6 +6,6 @@ class TryCatchExample1
     System.out.println("rest of the code");        
   }    
 }  
-//throws error and rest of the code is not executed
-//Exception in thread "main" java.lang.ArithmeticException: / by zero
-//         at TryCatchExample1.main(TryCatchExample1.java:7)
+/*throws error and rest of the code is not executed
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+         at TryCatchExample1.main(TryCatchExample1.java:7)*/
